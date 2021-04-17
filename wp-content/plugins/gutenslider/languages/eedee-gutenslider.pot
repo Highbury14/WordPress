@@ -1,0 +1,122 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+
+#: src/blocks/gutenslide/block_free/edit.js:171
+#: src/blocks/gutenslide/block_pro/edit.js:178
+#: src/blocks/gutenslider/block_pro/edit.js:527
+msgid "Change content position"
+msgstr ""
+
+#: src/blocks/gutenslide/block_free/edit.js:34
+#: src/blocks/gutenslide/block_pro/edit.js:34
+msgid "Add slide content here…"
+msgstr ""
+
+#: src/blocks/gutenslider/block_pro/edit.js:550
+msgid "Edit Slides"
+msgstr ""
+
+#: src/blocks/gutenslider/block_pro/edit.js:559
+msgid "Preview Slider"
+msgstr ""
+
+#: src/blocks/gutenslider/block_pro/edit.js:559
+msgid "Edit Slide Content"
+msgstr ""
+
+#: src/blocks/gutenslider/block_pro/edit.js:834
+msgid "Add Empty Slide"
+msgstr ""
+
+#: src/blocks/gutenslider/block_pro/edit.js:846
+msgid "Select background media from your library or add an empty slide."
+msgstr ""
+
+#: src/blocks/gutenslider/block_pro/edit.js:866
+#: src/components/reusable/media-picker/media-picker.js:345
+msgid "Media Library"
+msgstr ""
+
+#: src/blocks/gutenslider/block_pro/edit.js:877
+msgid "Add empty slide"
+msgstr ""
+
+#: src/components/reusable/media-picker/media-picker.js:188
+msgid "To edit this block, you need permission to upload media."
+msgstr ""
+
+#: src/components/reusable/media-picker/media-picker.js:203
+msgid "Upload a media file or pick one from your media library."
+msgstr ""
+
+#: src/components/reusable/media-picker/media-picker.js:208
+msgid ""
+"Upload an audio file, pick one from your media library, or add one with a "
+"URL."
+msgstr ""
+
+#: src/components/reusable/media-picker/media-picker.js:212
+msgid ""
+"Upload an image file, pick one from your media library, or add one with a "
+"URL."
+msgstr ""
+
+#: src/components/reusable/media-picker/media-picker.js:216
+msgid ""
+"Upload a video file, pick one from your media library, or add one with a "
+"URL."
+msgstr ""
+
+#: src/components/reusable/media-picker/media-picker.js:223
+msgid "Media"
+msgstr ""
+
+#: src/components/reusable/media-picker/media-picker.js:226
+msgid "Audio"
+msgstr ""
+
+#: src/components/reusable/media-picker/media-picker.js:228
+msgid "Image"
+msgstr ""
+
+#: src/components/reusable/media-picker/media-picker.js:230
+msgid "Video"
+msgstr ""
+
+#: src/components/reusable/media-picker/media-picker.js:292
+msgid "Cancel"
+msgstr ""
+
+#: src/components/reusable/media-picker/media-picker.js:308
+msgid "Insert from URL"
+msgstr ""
+
+#: src/components/reusable/media-picker/media-picker.js:37
+msgid "URL"
+msgstr ""
+
+#: src/components/reusable/media-picker/media-picker.js:38
+msgid "Paste or type URL"
+msgstr ""
+
+#: src/components/reusable/media-picker/media-picker.js:398
+msgid "Upload"
+msgstr ""
+
+#: src/components/reusable/media-picker/media-picker.js:437
+msgid "Focal Point"
+msgstr ""
+
+#: src/components/reusable/media-picker/media-picker.js:449
+msgid "Remove Image"
+msgstr ""
+
+#: src/components/reusable/media-picker/media-picker.js:449
+msgid "Remove Video"
+msgstr ""
+
+#: src/components/reusable/media-picker/media-picker.js:45
+msgid "Apply"
+msgstr ""
