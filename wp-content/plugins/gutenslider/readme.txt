@@ -1,18 +1,21 @@
 === WordPress Slider Block Gutenslider ===
-Contributors: eedee, wordpressslider, freemius
-Tags: slider, slider block, image slider, video slider, wordpress slider, carousel, gallery, responsive
-Requires at least: 5.4
-Tested up to: 5.7
+Contributors: eedee, wordpressslider, gutenbergslider, freemius
+Tags: slider, slider block, image slider, video slider, wordpress slider, carousel, gallery, responsive, media slider, content slider
+Requires at least: 5.6
+Tested up to: 5.8.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Stable tag: 5.4.0
 
-WordPress slider plugin for Gutenberg. Create a image slider, video slider, fullscreen slider with this powerful slider block and add any block on top. Slide anything!
+Slider plugin for Gutenberg. Create a image slider, video slider, fullscreen slider with this powerful slider block and add any block on top. Slide anything!
 
 == Description ==
 
-Gutenslider is an image slider and video slider plugin for WordPress that adds a simple to use Gutenberg slider block to your WordPress editor. You can add any content on top that you want! Gutenslider is faster and slicker than any other slider around. Go and try it out yourself and make use of a content slider, image slider and video slider **that will increase user engagement on your website** and allow you to **create your sliders in seconds** not in minutes, by using the Gutenberg backend editor you know already. No need to study complicated backend editors. Gutenslider is the best match for you and your customers.
+Gutenslider is an image slider and video slider plugin for WordPress that adds a simple to use Gutenberg slider block to your WordPress editor. You do not need
+other editors but can manage everything directly in the Gutenberg editor you already know and love. You can add any content on top that you want! Gutenslider is faster and slicker than any other slider around.
+Go and try it out yourself and make use of a content slider, image slider and video slider **that will increase user engagement on your website** and allow you to **create your sliders in seconds** not in minutes, by using the Gutenberg backend editor you know already. No need to study complicated backend editors. Gutenslider is the best match for you and your customers.
 
-[youtube https://youtu.be/2eqY_mZIZ6w]
+[youtube https://youtu.be/iuZg4RTcZQ4]
 
 [Live Examples](https://gutenslider.org/)
 
@@ -24,40 +27,68 @@ With Gutenslider, enhancing your blog or website is easier than ever:
 4. Customize Gutenslider to your needs in the backend
 5. Slide! 👩‍🎤
 
-Gutenslider is easy to use, fast, and very powerful and developed by trusted developers.
+Gutenslider is easy to use, fast, and very powerful and developed by trusted developers, that also contribute to the Gutenberg core repository.
 
 == Plugin Features ==
 
-- Add Unlimited Slides
-- Change the transition mode: fade/slide
+- Add unlimited slides
+- Change the [transition mode](https://gutenslider.org/examples/transition-animation/): `fade`, `slide`, `flip`
 - [Add any block on top that you want](https://gutenslider.org/adding-content-examples/)
-- Block Alignment: Wide, Full
-- Content Alignment: Top, Center, Bottom
+- Block alignment: `wide`, `full`
+- Content alignment: `top`, `center`, `bottom`, `left`, `right`
+- Fixed Content / Changing Content
+- Slides to show: `auto` or `1`
 - Arrows on/off
 - Arrow size
+- 3 Arrow Colors
 - Dots on/off
 - Dots size
+- 3 Dot Colors
 - Spacing: top/bottom and left/right
+- Margin: top/bottom and left/right
 - [Automatic Captions](https://gutenslider.org/automatic-photo-captions/)
 - [Fullscreen slider](https://gutenslider.org/examples/fullscreen-background-slider-example/) (slider will be in the background of your content).
 - Very easy to use because it is a Gutenberg block - no need to go away from your backend editor
 - Hyperlink Slides
+- Simple [lightGallery](https://gutenslider.org/gutenslider-x-lightgallery/) integration
+- webp support
+- Hash navigation
 
 == Plugin Pro Features 💎 ==
 
 - Video Slider: add videos to your slide backgrounds
-- Fullscreen Sliders
 - [Parallax Sliders](https://gutenslider.org/parallax-slider-for-wordpress/)
+- 5 transition modes: `fade`, `slide`, `flip`, `coverflow`, `cube`
 - Transition time
 - Time of a slide
 - Color overlays of slides
 - Gradient overlay of slides
+- Space between slides
 - Bulk Editing
 - Arrow color / Arrow Background Color
-- 10 Arrow styles
-- Dots color
+- Advanced Arrow Styles
+	- Pick from 10 styles or add your own svg
+	- Position ( `Sides`, `Top Left`, `Bottom Left`, `Top Right`, `Bottom Right` )
+	- Unlimited Color Options
+	- Background Color
+	- Hover Colors
+	- Arrow horizontal and vertical offset
+	- Arrow Mix Blending
+	- [Custom SVG arrows](https://gutenslider.org/adding-custom-arrows-to-your-wordpress-sliders/)
+- Advanced Progress options
+	- Style ( dots, dynamic dots, numbers, progressbar )
+	- Position ( `Top`, `Bottom`, `Left`, `Right` )
+	- Offset
+	- Unlimited Color Options
+- Advanced [lightgallery](https://gutenslider.org/gutenslider-x-lightgallery/) styles
+  - choose any background color
+	- pick from 30 transitions
+	- enable/disable counter
+	- enable and set image caption
 - Dots style
-- Responsive Spacing Controls
+- Advanced Responsive Controls
+- Slides to show: either `auto` or maximum of `8`
+- Advanced Hash Navigation Settings: customize hash for slider + slides
 - ... and of course all free features
 
 [Free 7-day trial, no credit card required](https://checkout.freemius.com/mode/dialog/plugin/3804/plan/6127/?trial=free)
@@ -123,7 +154,13 @@ Yes, just post a question on the support tab, and we will answer as soon as poss
 We are happy to extend Gutenslider to our users' needs. Just contact us on our website at [https://gutenslider.org](https://gutenslider.org) and we will see what we can do.
 
 = What is Gutenberg =
+
 To get the full experience of the next-generation WordPress block editor, you’ll need a Gutenberg-ready WordPress theme then install the Gutenberg WordPress plugin or simply update your site to WordPress 5.0. That’s it! 💥
+
+= Can I have Gutenslider in my language =
+
+You can contribute to translating Gutenslider for you and all other users of your language here: https://translate.wordpress.org/projects/wp-plugins/gutenslider/ . Just submit your translations and once they are accepted, Gutenslider will immediately work in your language.
+
 
 == Screenshots ==
 
@@ -132,10 +169,202 @@ To get the full experience of the next-generation WordPress block editor, you’
 
 == Changelog ==
 
-= 4.5.1 =
-* WordPress 5.7 compatibility tests
-* Fix a bug with Gutenberg 10.3.x
-* Update freemius sdk to latest version
+= 5.5.5 =
+* Add visual arrow select component
+* Fix UI editor control style
+* Improve divider controls / pro
+* remove console logs in rare cases
+
+= 5.5.4 =
+* Fix transition animation preview in editor (Gutenslider free)
+* Fix media select modal for free + pro (if only images, make reorder possible)
+
+= 5.5.3 =
+* Fix a bug with margin top + bottom controls
+* Fix Gutenberg Plugin > 12.x style issue with range control
+* Add hash functionality for links
+* Fix a bug with dividers and downgrading from pro -> free
+
+= 5.5.2 =
+* Add hash navigation functionality to add direct links to slides
+* Add Gutenslider instance to dom element for easier javascript manipulation
+
+= 5.5.1 =
+* Add `gutenslider_arrow` hook to allow easier integration of custom arrow styles, see https://gutenslider.org/adding-custom-arrows-to-your-wordpress-sliders/
+
+= 5.5.0 =
+* Fix gutenslider not working in widgets and
+
+= 5.4.6 =
+* Fix compatibility issue with Gutenberg 11.9.0
+
+= 5.4.5 =
+* Upadte readme and links
+
+= 5.4.4 =
+* Fix a bug with lightgallery on safari
+
+= 5.4.3 =
+* Fix a bug with lightgallery
+
+= 5.4.2 =
+* Fix a bug where slider is not shown in editor in some configurations
+
+= 5.4.1 =
+* Fix lightgallery not showing in some themes
+
+= 5.4.0 =
+* Add lightgallery for image / video slides (does only enlarge the media not the slide content)
+* Add unminified gutenslider-front-unmin.js to allow a higher level of customization for users
+* Add front.js to package to allow a higher level of customization for users
+* Fix issue with slide links not being saved when adding slides to slider
+* Update bootstrap to 5 (used in admin only partially)
+* Add: Enable keyboard controls
+
+= 5.3.3 =
+* Make more strings translatable
+
+= 5.3.2 =
+* Update readme
+
+= 5.3.1 =
+* Update readme to reflect latest stable tag (used for translation), and information for translators
+
+= 5.3.0 =
+* Fix: make Gutenslider ready for i18n in all languages that can now be pulled from the official WordPress translate directory
+
+= 5.2.3 =
+* Fix: remove empty style tag from frontend for w3c validation
+
+= 5.2.2 =
+* Fix i18n: pot file generation works
+* Fix i18n: updated german translations
+* Fix i18n: make more strings translatable
+
+= 5.2.1 =
+* fix 5.2 compatibility issue with Gutenberg Plugin
+
+= 5.2.0 =
+* fix possible xss attack vectors for users with contributor role and above
+
+= 5.1.5 =
+* add one more block Pattern: "Full Height Slider"
+* fix block appender layout in fixed content slider
+* fix now backwards compatible to PHP 5.3
+
+= 5.1.4 =
+* fix dots showing on mobile even if turned off
+* fix "Add Empty Slide" button not working on some setups
+
+= 5.1.3 =
+* fix a bug in GradientPicker component
+
+= 5.1.2 =
+* fix unique block ids on block copying
+* fix blurry images on large screens by adding more image sizes
+
+= 5.1.1 =
+* more discretion: move from top level admin menu to Settings -> Gutenslider
+* more discretion: improve admin style
+
+= 5.1.0 =
+* Add dividers
+* fix unable to select text in editor because of dragging slide [forum](https://wordpress.org/support/topic/editorview-unable-to-mark-text-content-because-of-dragging/)
+* improve block settings css
+
+= 5.0.18 =
+* fix a bug in transform to cover
+* enable block transforms for all gutenslider versions
+
+= 5.0.17 =
+* improve slide link control with updated component and `target="_blank"` which automatically sets `rel="noreferrer noopener"`
+* add block transform from and to gallery block (`core/gallery`)
+* fix slide block selection in `contentMode: 'fixed'`
+
+= 5.0.16 =
+* fix editor slider not updating when changing slidesToShow
+* fix WordPress custom class missing on slides
+
+= 5.0.15 =
+* add first gutenslider block pattern: testimonial slider
+* fix automatic css block id
+* fix video autoplay issue on some setups
+* fix sliders with autoheight and slide backgrounds without media
+* remove unneeded admin notice
+* improve editor speed
+* improve responsive editor buttons
+
+= 5.0.14 =
+* Fix content positioning in editor
+
+= 5.0.13 =
+* fix a issue with automatic media captions
+* fix code that produced console warnings
+* fix default margin setting
+* fix a responsive height issue on fixed sliders
+* remove unneeded attributes from frontend
+
+= 5.0.12 =
+* fix content alignment of new empty slides (click add empty slide button)
+* fix content alignment of new media slides (selected from media library)
+
+
+= 5.0.11 =
+* Improve editor UX by smaller block json requests for fixed sliders
+* Improve editor UX on fixed content sliders: click on slide now selects slide block
+
+= 5.0.10 =
+* Fix videos in slides per view auto
+
+= 5.0.9 =
+* Fix Full Screen Background Slider + margins [forum](https://wordpress.org/support/topic/fullscreen-background-slider-top-bottom-margins/)
+
+= 5.0.8 =
+* Style appearance of add empty slide button
+* Fix a style issue with wide slider and fixed content
+* Fix a dot overflowing issue in some themes
+
+= 5.0.7 =
+* Fix a white slider error on safari 13.x
+* Add flip animation to free version
+* Remove `mix blend mode` settings from InspectorControls
+
+= 5.0.6 =
+* Update readme with new intro video
+* Fix a styling issue in new admin changelog display
+
+= 5.0.5 =
+* Fix no media slide width with multiple slides per view
+
+= 5.0.4 =
+* Fix slide links, you can now again link your slides to urls
+
+= 5.0.3 =
+* Fix an error with headers already sent in free version and pro version
+
+= 5.0.0 =
+* Move from slick to [swiper](https://swiperjs.com/) as slider library because of maintainablity, usability and security reasons
+* Added three more animations ( pro ):
+  * coverflow
+	* cube
+* Added more Progress options ( pro ):
+  * Fraction - Display Slide Number
+	* Progress - Display a Progressbar
+	* Dynamic - Display dynamic bullets
+* Space between slides ( pro )
+* Insert images from url
+* Slides per view auto
+* Advanced more finegrained responsive controls ( pro )
+* Conditional assets loading ( only load gutenslider css and js on posts/pages with Gutenslider blocks )
+* Reduced file size - faster loading - better SEO score
+* Improve Lazy Loading and srcset
+
+* Fix: desktop slider appears on mobile [forum1](https://wordpress.org/support/topic/mobile-and-desktop-videos-appearing-at-the-same-time/) [forum2](https://wordpress.org/support/topic/desktop-hidden-slider-appears-on-mobile/)
+* Fix: slider crashes in some cases when changing back and forth adaptive height
+* Fix: block example now working
+* Fix: replace slides / add empty slide now working
+* Fix: edit / preview mode switch error
+* Fix: slide width can now be set on transparent / gradient / color bg
 
 = 4.5.0 =
 * Easier responsive controls + preview (Pro)
@@ -486,5 +715,6 @@ of features or follow our blog.
 
 Gutenslider is made possible by awesome developers who release their code under reusable licenses. We use the following open source software:
 
-- [Slick Slider](https://kenwheeler.github.io/slick/) ([github](https://github.com/kenwheeler/slick))
+- [swiper](https://swiperjs.com/) ([github](https://github.com/nolimits4web/swiper))
+- [lightGallery](https://www.lightgalleryjs.com/) ([github](https://github.com/sachinchoolur/lightGallery))
 - [SimpleParallax](https://simpleparallax.com/) ([github](https://github.com/geosigno/simpleParallax))

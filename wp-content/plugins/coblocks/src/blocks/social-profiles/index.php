@@ -76,6 +76,10 @@ function coblocks_render_social_profiles_block( $attributes ) {
 			'text' => esc_html__( 'Instagram', 'coblocks' ),
 			'url'  => $attributes['instagram'],
 		),
+		'tiktok'    => array(
+			'text' => esc_html__( 'TikTok', 'coblocks' ),
+			'url'  => $attributes['tiktok'],
+		),
 		'pinterest' => array(
 			'text' => esc_html__( 'Pinterest', 'coblocks' ),
 			'url'  => $attributes['pinterest'],
@@ -160,7 +164,7 @@ function coblocks_render_social_profiles_block( $attributes ) {
 		$class .= ' has-colors';
 	}
 
-	if ( isset( $attributes['size'] ) && 'med' !== $attributes['size'] && ( isset( $attributes['className'] ) && strpos( $attributes['className'], 'is-style-mask' ) === false ) ) {
+	if ( isset( $attributes['size'] ) && ( isset( $attributes['className'] ) && strpos( $attributes['className'], 'is-style-mask' ) === false ) ) {
 		$class .= ' has-button-size-' . $attributes['size'];
 	}
 

@@ -7,10 +7,10 @@
  * Description: WordPress slider plugin for Gutenberg. Create an image slider, video slider, fullscreen slider with this powerful slider block and add any block on top. Slide anything!
  * Author: eedee
  * Author URI: https://eedee.net
- * Version: 4.5.1
+ * Version: 5.5.5
  * License: GPL2+
  * License URI: https://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain: eedee-gutenslider
+ * Text Domain: gutenslider
  * Domain Path: /languages
  *
  * @package Gutenslider
@@ -48,16 +48,21 @@ if ( function_exists( 'gutenslider_fs' ) ) {
                     'has_addons'      => false,
                     'has_paid_plans'  => true,
                     'has_affiliation' => 'selected',
+                    'navigation'      => 'tabs',
                     'trial'           => array(
                     'days'               => 7,
                     'is_require_payment' => false,
                 ),
                     'menu'            => array(
-                    'slug'        => 'settings_page_gutenslider',
-                    'contact'     => true,
-                    'support'     => true,
+                    'slug'        => 'settings-page-gutenslider',
+                    'first-path'  => 'options-general.php?page=settings-page-gutenslider',
                     'affiliation' => false,
                     'pricing'     => true,
+                    'support'     => false,
+                    'contact'     => true,
+                    'parent'      => array(
+                    'slug' => 'options-general.php',
+                ),
                 ),
                     'is_live'         => true,
                 ) );
@@ -68,6 +73,9 @@ if ( function_exists( 'gutenslider_fs' ) ) {
         
         // Init Freemius.
         gutenslider_fs();
+        gutenslider_fs()->override_i18n( array(
+            'woot' => __( 'You did it', 'gutenslider' ),
+        ) );
         // Signal that SDK was initiated.
         do_action( 'gutenslider_fs_loaded' );
     }
@@ -197,7 +205,7 @@ if ( !class_exists( 'Gutenslider' ) ) {
          */
         private function init()
         {
-            add_action( 'plugins_loaded', array( $this, 'load_textdomain' ), 99 );
+            // add_action( 'plugins_loaded', array( $this, 'load_textdomain' ), 99 );
             add_action( 'enqueue_block_editor_assets', array( $this, 'block_localization' ) );
         }
         
@@ -221,7 +229,7 @@ if ( !class_exists( 'Gutenslider' ) ) {
          */
         public function asset_source( $type = 'js', $directory = null )
         {
-            return GUTENSLIDER_PLUGIN_URL . 'dist';
+            return GUTENSLIDER_PLUGIN_URL . 'build';
         }
         
         /**
@@ -233,7 +241,7 @@ if ( !class_exists( 'Gutenslider' ) ) {
          */
         public function load_textdomain()
         {
-            load_plugin_textdomain( 'gutenslider', false, dirname( plugin_basename( GUTENSLIDER_PLUGIN_DIR ) ) . '/languages/' );
+            // load_plugin_textdomain( 'gutenslider', false, dirname( plugin_basename( GUTENSLIDER_PLUGIN_DIR ) ) . '/languages/' );
         }
         
         /**
@@ -244,7 +252,7 @@ if ( !class_exists( 'Gutenslider' ) ) {
         public function block_localization()
         {
             if ( function_exists( 'wp_set_script_translations' ) ) {
-                wp_set_script_translations( 'gutenslider-editor', 'gutenslider' );
+                // wp_set_script_translations( 'gutenslider-editor', 'gutenslider' );
             }
         }
     

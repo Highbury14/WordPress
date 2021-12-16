@@ -47,6 +47,7 @@ class CoBlocks_Block_Assets {
 		add_action( 'enqueue_block_editor_assets', array( $this, 'editor_scripts' ) );
 		add_action( 'enqueue_block_editor_assets', array( $this, 'frontend_scripts' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'frontend_scripts' ) );
+		add_action( 'save_post_wp_template_part', array( $this, 'clear_template_transients' ) );
 	}
 
 	/**
@@ -85,23 +86,37 @@ class CoBlocks_Block_Assets {
 			// This is similar to has_block() in core, but will match anything
 			// in the coblocks/* namespace.
 			if ( $wp_post instanceof WP_Post ) {
-				$has_coblock = ! empty(
-					array_filter(
-						array(
-							false !== strpos( $wp_post->post_content, '<!-- wp:coblocks/' ),
-							has_block( 'core/block', $wp_post ),
-							has_block( 'core/button', $wp_post ),
-							has_block( 'core/cover', $wp_post ),
-							has_block( 'core/heading', $wp_post ),
-							has_block( 'core/image', $wp_post ),
-							has_block( 'core/gallery', $wp_post ),
-							has_block( 'core/list', $wp_post ),
-							has_block( 'core/paragraph', $wp_post ),
-							has_block( 'core/pullquote', $wp_post ),
-							has_block( 'core/quote', $wp_post ),
-						)
+
+				$has_coblock = $this->has_coblocks_block( $wp_post );
+
+			}
+
+			$coblocks_template_part_query = get_transient( 'coblocks_template_parts_query' );
+
+			if ( false === $coblocks_template_part_query ) {
+
+				// Determine if template parts contain any coblocks/* namespace.
+				$coblocks_template_part_query = get_posts(
+					array(
+						'post_type'      => 'wp_template_part',
+						'posts_per_page' => -1,
 					)
 				);
+
+				set_transient( 'coblocks_template_parts_query', $coblocks_template_part_query, WEEK_IN_SECONDS );
+
+			}
+
+			if ( ! $has_coblock && ! empty( $coblocks_template_part_query ) ) {
+
+				foreach ( $coblocks_template_part_query as $template_part ) {
+
+					if ( $this->has_coblocks_block( $template_part ) ) {
+
+						$has_coblock = true;
+
+					}
+				}
 			}
 		}
 
@@ -110,7 +125,7 @@ class CoBlocks_Block_Assets {
 		}
 
 		// Styles.
-		$name       = 'coblocks-style';
+		$name       = 'style-coblocks';
 		$filepath   = 'dist/' . $name;
 		$asset_file = $this->get_asset_file( $filepath );
 		$rtl        = ! is_rtl() ? '' : '-rtl';
@@ -130,7 +145,7 @@ class CoBlocks_Block_Assets {
 	 */
 	public function editor_assets() {
 		// Styles.
-		$name       = 'coblocks-editor';
+		$name       = 'coblocks';
 		$filepath   = 'dist/' . $name;
 		$asset_file = $this->get_asset_file( $filepath );
 		$rtl        = ! is_rtl() ? '' : '-rtl';
@@ -208,6 +223,7 @@ class CoBlocks_Block_Assets {
 				'customIconConfigExists'         => file_exists( get_stylesheet_directory() . '/coblocks/icons/config.json' ),
 				'typographyControlsEnabled'      => $typography_controls_enabled,
 				'animationControlsEnabled'       => $animation_controls_enabled,
+				'localeCode'                     => get_locale(),
 			)
 		);
 
@@ -305,7 +321,7 @@ class CoBlocks_Block_Assets {
 		$dir = CoBlocks()->asset_source( 'js' );
 
 		// Define where the vendor asset is loaded from.
-		$vendors_dir = CoBlocks()->asset_source( 'js', 'vendors' );
+		$vendors_dir = CoBlocks()->asset_source( 'js/vendors' );
 
 		// Enqueue for coblocks animations.
 		wp_enqueue_script(
@@ -416,6 +432,49 @@ class CoBlocks_Block_Assets {
 	}
 
 	/**
+	 * Clear transient when wp_template_part is saved/updated
+	 *
+	 * @access public
+	 * @since  2.14.2
+	 */
+	public function clear_template_transients() {
+
+		delete_transient( 'coblocks_template_parts_query' );
+
+	}
+
+	/**
+	 * Determine if the given post content contains any CoBlocks blocks
+	 *
+	 * @access public
+	 * @since  2.14.2
+	 * @param  WP_Post $post_object Post object.
+	 *
+	 * @return boolean True when post content contains a CoBlocks block.
+	 */
+	public function has_coblocks_block( WP_Post $post_object ) {
+
+		return ! empty(
+			array_filter(
+				array(
+					false !== strpos( $post_object->post_content, '<!-- wp:coblocks/' ),
+					has_block( 'core/block', $post_object ),
+					has_block( 'core/button', $post_object ),
+					has_block( 'core/cover', $post_object ),
+					has_block( 'core/heading', $post_object ),
+					has_block( 'core/image', $post_object ),
+					has_block( 'core/gallery', $post_object ),
+					has_block( 'core/list', $post_object ),
+					has_block( 'core/paragraph', $post_object ),
+					has_block( 'core/pullquote', $post_object ),
+					has_block( 'core/quote', $post_object ),
+				)
+			)
+		);
+
+	}
+
+	/**
 	 * Enqueue editor scripts for blocks.
 	 *
 	 * @access public
@@ -423,7 +482,7 @@ class CoBlocks_Block_Assets {
 	 */
 	public function editor_scripts() {
 		// Define where the vendor asset is loaded from.
-		$vendors_dir = CoBlocks()->asset_source( 'js', 'vendors' );
+		$vendors_dir = CoBlocks()->asset_source( 'js/vendors' );
 
 		// Required by the events block.
 		wp_enqueue_script(

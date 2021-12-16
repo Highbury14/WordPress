@@ -17,6 +17,7 @@ export default {
 		{
 			name: 'eedee/block-gutenslide',
 			attributes: {
+        contentPosition: 'center',
 				background: {
 					...defaultBackground,
 					backgroundType: 'image',
@@ -30,8 +31,8 @@ export default {
 					name: 'core/heading',
 					attributes: {
 						/* translators: example text for slide 1. */
-						content: __( 'Slide 1' ),
-						align: 'center',
+						content: __( 'Gutenslider', 'gutenslider' ),
+						textAlign: 'center',
 					},
 				},
 			],
@@ -40,6 +41,7 @@ export default {
 			name: 'eedee/block-gutenslide',
 			attributes: {
 				background: {
+          contentPosition: 'center',
 					...defaultBackground,
 					backgroundType: 'image',
 					backgroundImage: {
@@ -52,9 +54,14 @@ export default {
 					name: 'core/heading',
 					attributes: {
 						/* translators: example text for slide 2. */
-						content: __( 'Slide 2' ),
-						align: 'center',
+						content: __( 'is', 'gutenslider' ),
+						textAlign: 'center',
 						customTextColor: '#00CEFF',
+						style: {
+              color: {
+                text: '#00CEFF',
+              },
+            },
 					},
 				},
 			],
@@ -63,6 +70,7 @@ export default {
 			name: 'eedee/block-gutenslide',
 			attributes: {
 				background: {
+          contentPosition: 'center',
 					...defaultBackground,
 					backgroundType: 'image',
 					backgroundImage: {
@@ -72,12 +80,13 @@ export default {
 			},
 			innerBlocks: [
 				{
-					name: 'core/heading',
+					name: 'core/list',
 					attributes: {
-						/* translators: example text for slide 3. */
-						content: __( 'Slide 3' ),
-						align: 'center',
-						customTextColor: '#ffffff',
+            "ordered": false,
+            /* translators: example text for slide 3. */
+            "values": "<li>awsome</li><li>fast</li><li>user friendly</li><li>leightweight</li><li>SEO friendly</li><li>...</li>",
+            "textColor": "white",
+            fontSize: 'large',
 					},
 				},
 			],
