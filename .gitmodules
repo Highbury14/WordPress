@@ -2,3 +2,18 @@
 	path = wp-content/plugins/wp-graphql-polylang
 	url = https://github.com/valu-digital/wp-graphql-polylang.git
         branch = stable
+[submodule "wp-content/plugins/wp-graphql-gutenberg"]
+	path = wp-content/plugins/wp-graphql-gutenberg
+	url = https://github.com/pristas-peter/wp-graphql-gutenberg.git
+[submodule "wp-content/plugins/wp-graphql-jwt-authentication"]
+	path = wp-content/plugins/wp-graphql-jwt-authentication
+	url = https://github.com/wp-graphql/wp-graphql-jwt-authentication.git
+[submodule "wp-content/plugins/wp-graphql-woocommerce"]
+	path = wp-content/plugins/wp-graphql-woocommerce
+	url = https://github.com/wp-graphql/wp-graphql-woocommerce.git
+[submodule "wp-content/plugins/wp-graphql-acf"]
+	path = wp-content/plugins/wp-graphql-acf
+	url = https://github.com/wp-graphql/wp-graphql-acf.git
+[submodule "wp-content/plugins/wp-graphql-ninja-forms"]
+	path = wp-content/plugins/wp-graphql-ninja-forms
+	url = https://github.com/toriphes/wp-graphql-ninja-forms.git
