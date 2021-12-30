@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Ninja Forms Contact Form &#8211; The Drag and Drop Form Builder for WordPress - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-06-05 12:29:39+0000\n"
+"PO-Revision-Date: 2021-12-20 17:24:58+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,116 @@ msgstr ""
 "X-Generator: GlotPress/3.0.0-alpha.2\n"
 "Language: en_GB\n"
 "Project-Id-Version: Plugins - Ninja Forms Contact Form &#8211; The Drag and Drop Form Builder for WordPress - Stable (latest release)\n"
+
+#: includes/Routes/Submissions.php:157
+msgid "Form ID of the setting saved"
+msgstr "Form ID of the setting saved"
+
+#: includes/Routes/Submissions.php:151
+msgid "Settings data"
+msgstr "Settings data"
+
+#: includes/Admin/Processes/ExportSubmissions.php:116
+#: includes/Admin/Processes/ExportSubmissions.php:163
+msgid "Unable to write file."
+msgstr "Unable to write file."
+
+#: includes/Actions/Recaptcha.php:366 includes/Actions/Recaptcha.php:375
+msgid "Recaptcha validation failed. Please try again later"
+msgstr "ReCAPTCHA validation failed. Please try again later"
+
+#: includes/Actions/Recaptcha.php:63
+msgid "reCAPTCHA v3"
+msgstr "reCAPTCHA v3"
+
+#: includes/Routes/Submissions.php:359 includes/Routes/Submissions.php:425
+#: includes/Routes/Submissions.php:455 includes/Routes/Submissions.php:521
+msgid "This request is missing data"
+msgstr "This request is missing data"
+
+#: includes/Routes/Submissions.php:177 build/submissions.js:1
+msgid "Submission ID"
+msgstr "Submission ID"
+
+#: includes/Routes/Submissions.php:105
+msgid "strtotime($date) that represents the end date we will retrieve submssions at."
+msgstr "strtotime($date) that represents the end date we will retrieve submssions at."
+
+#: includes/Routes/Submissions.php:99
+msgid "strtotime($date) that represents the start date we will retrieve submssions at."
+msgstr "strtotime($date) that represents the start date we will retrieve submssions at."
+
+#: includes/Config/ActionRecaptchaV3Settings.php:18
+msgid "reCAPTCHA v3 returns a score (1.0 is very likely a good interaction, 0.0 is very likely a bot). Configure the score threshold for your form submission."
+msgstr "reCAPTCHA v3 returns a score (1.0 is very likely a good interaction, 0.0 is very likely a bot). Configure the score threshold for your form submission."
+
+#: includes/Config/ActionRecaptchaV3Settings.php:15
+msgid "Score"
+msgstr "Score"
+
+#: includes/AJAX/Controllers/Submission.php:104
+msgid "This form is currently undergoing maintenance. Please %sclick here%s to reload the form and try again."
+msgstr "This form is currently undergoing maintenance. Please %sclick here%s to reload the form and try again."
+
+#: blocks/bootstrap.php:142 blocks/bootstrap.php:161
+msgid "Unique identifier for the object."
+msgstr "Unique identifier for the object."
+
+#: blocks/bootstrap.php:22 build/form-block.js:1
+msgid "Ninja Form"
+msgstr "Ninja Form"
+
+#: includes/Admin/Menus/Addons.php:114
+msgid "Don’t See Your Favorite Service Above? We Can Likely Still Help."
+msgstr "Don’t see your favourite service above? We can likely still help."
+
+#: includes/Admin/Menus/Addons.php:110
+msgid "Never Miss an Important Submission or Lead Again!"
+msgstr "Never miss an important submission or lead again!"
+
+#: includes/Admin/Menus/Addons.php:106
+msgid "Generate More Leads Than You Ever Thought Possible"
+msgstr "Generate more leads than you ever thought possible"
+
+#: includes/Admin/Menus/Addons.php:98
+msgid "Want to Attract More Subscribers to Your Mailing Lists?"
+msgstr "Want to attract more subscribers to your mailing lists?"
+
+#: includes/Admin/Menus/Addons.php:94
+msgid "Accept Payments & Donations Without Breaking the Bank"
+msgstr "Accept payments and donations without breaking the bank"
+
+#: includes/Admin/Menus/Addons.php:90
+msgid "Better Document Sharing will Take Your Business Further"
+msgstr "Better document sharing will take your business further"
+
+#: includes/Admin/Menus/Addons.php:86
+msgid "You Can Build Smart, Beautiful WordPress Forms!"
+msgstr "You can build smart, beautiful WordPress forms!"
+
+#: includes/Config/i18nBuilder.php:90
+msgid "Integrate with 1000+ More Services"
+msgstr "Integrate with 1000+ more services"
+
+#: includes/Config/i18nBuilder.php:89
+msgid "Send SMS Form Notifications"
+msgstr "Send SMS form notifications"
+
+#: includes/Config/i18nBuilder.php:88
+msgid "Document & Workflow Management"
+msgstr "Document and workflow management"
+
+#: includes/Config/i18nBuilder.php:87
+msgid "Manage Your Users Better"
+msgstr "Manage your users better"
+
+#: includes/Config/i18nBuilder.php:86
+msgid "Connect to Your Email Marketing or CRM Account"
+msgstr "Connect to your email marketing or CRM account"
+
+#: includes/Templates/admin-menu-system-status.html.php:25
+msgid "For your security, do not post this information in public places, such as the WordPress.org support forums."
+msgstr "For your security, do not post this information in public places, such as the WordPress.org support forums."
 
 #: includes/Abstracts/Field.php:158
 msgid "This field is required."
